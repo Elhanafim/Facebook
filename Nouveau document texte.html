@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook – Log In or Sign Up</title>
+    <!-- HTML/CSS layout exercise. Not affiliated with, endorsed by, or connected to Meta or Facebook. -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; form-action 'none'; base-uri 'none'">
+    <title>Login form layout – HTML/CSS practice</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>facebook</h1>
+        <p class="notice" role="note">
+            HTML/CSS layout exercise &mdash; not affiliated with Meta or Facebook.
+            This form does not send data anywhere. Never type real credentials here.
+        </p>
+        <h1>login practice</h1>
         <div class="login-box">
-            <form action="process.php" method="POST">
-                <input type="text" name="email" placeholder="Email or Phone Number" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Log In</button>
+            <!-- No action/method, disabled fields and CSP form-action 'none': this form cannot submit. -->
+            <form autocomplete="off" novalidate>
+                <input type="text" name="demo-user" placeholder="Email or Phone Number" autocomplete="off" disabled>
+                <input type="password" name="demo-pass" placeholder="Password" autocomplete="off" disabled>
+                <button type="button" disabled>Log In</button>
             </form>
             <p><a href="#">Forgotten password?</a></p>
             <p><a href="#">Create New Account</a></p>
